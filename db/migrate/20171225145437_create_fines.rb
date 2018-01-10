@@ -4,8 +4,9 @@ class CreateFines < ActiveRecord::Migration[5.1]
       t.string :name
       t.string :notes
       t.integer :value
+      t.integer :user_id
 
-    t.timestamps
+      t.timestamps
     end
   end
 end

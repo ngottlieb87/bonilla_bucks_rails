@@ -28,13 +28,13 @@ gem 'bootstrap'
 gem 'jquery-rails'
 gem 'devise'
 gem 'faker'
-gem 'rails_admin'
 gem 'socialization'
 gem 'will_paginate', '~> 3.1.0'
 gem 'bcrypt', '~> 3.1.7'
 gem "paperclip"
 gem 'stripe'
 gem 'acts_as_votable', '~> 0.11.1'
+gem 'rails_admin', '~> 1.2'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
