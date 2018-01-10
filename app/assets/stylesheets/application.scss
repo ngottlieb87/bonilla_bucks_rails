@@ -1,19 +1,30 @@
  @import "bootstrap";
 
+ // ___Color Codes___ //
+ $bodyColor: #4ABDAC;
+ $headerColor: #F7B733;
+ $textColor: #DFDCE3;
+ $aColor: #FC4A1A;
+
 // General Styles //
 .alertCard li {
   list-style-type: none;
 }
 
-.card {
-  background-color: purple;
+body {
+  background-color: $bodyColor;
+  color: $textColor;
+}
+
+a {
+  color: $aColor;
 }
 
 // Header Styles //
 header {
   z-index: 1;
   padding: 10px;
-  background-color: blue;
+  background-color: $headerColor;
   position: fixed;
   top: 0;
   left: 0;
@@ -23,7 +34,6 @@ header {
 }
 
 header h3 {
-  color: green;
   position: fixed;
   right: 0;
   margin-right: 20px;
