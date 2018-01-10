@@ -319,7 +319,7 @@ DEPENDENCIES
   pry
   puma (~> 3.7)
   rails (~> 5.1.4)
-  rails_admin
+  rails_admin (~> 1.2)
   rspec-rails
   sass-rails (~> 5.0)
   shoulda-matchers
@@ -335,4 +335,4 @@ DEPENDENCIES
   will_paginate (~> 3.1.0)
 
 BUNDLED WITH
-   1.15.4
+   1.16.0
