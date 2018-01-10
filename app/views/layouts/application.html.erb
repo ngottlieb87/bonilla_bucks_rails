@@ -20,7 +20,18 @@
     <% end %>
     <h3>Bonilla Bucks</h3>
   </header>
+  <br><br><br>
   <body>
-    <%= yield %>
+    <div class="container">
+      <% flash.each do |key, value| %>
+        <div class='alert alert-dismissible fade show card alertCard' role='alert'>
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <li aria-hidden="true">&times;</li>
+          </button>
+          <%= value %>
+        </div>
+      <% end %>
+      <%= yield %>
+    </div>
   </body>
 </html>

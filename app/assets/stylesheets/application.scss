@@ -1,5 +1,14 @@
  @import "bootstrap";
 
+// General Styles //
+.alertCard li {
+  list-style-type: none;
+}
+
+.card {
+  background-color: purple;
+}
+
 // Header Styles //
 header {
   z-index: 1;
