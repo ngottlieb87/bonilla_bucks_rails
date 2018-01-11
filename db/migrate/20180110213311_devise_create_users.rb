@@ -3,8 +3,8 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.1]
     create_table :users do |t|
       t.string :name
       t.integer :class_id
-      t.boolean :teacher
-      t.boolean :student
+      t.boolean :teacher, default: false
+      t.boolean :student, default: false
       ## Database authenticatable
       t.string :email,              null: false, default: ""
       t.string :encrypted_password, null: false, default: ""

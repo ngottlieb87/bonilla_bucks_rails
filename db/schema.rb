@@ -10,12 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180110215533) do
+ActiveRecord::Schema.define(version: 20180111002106) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "classes", force: :cascade do |t|
+  create_table "classroom", force: :cascade do |t|
     t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -42,8 +42,8 @@ ActiveRecord::Schema.define(version: 20180110215533) do
   create_table "users", force: :cascade do |t|
     t.string "name"
     t.integer "class_id"
-    t.boolean "teacher"
-    t.boolean "student"
+    t.boolean "teacher", default: false
+    t.boolean "student", default: false
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
     t.string "reset_password_token"
