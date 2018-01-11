@@ -1,6 +1,6 @@
 class Classroom < ActiveRecord::Migration[5.1]
   def change
-    create_table :classroom do |t|
+    create_table :classrooms do |t|
       t.string :room_num
 
       t.timestamps
