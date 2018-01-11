@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 20180111004808) do
   enable_extension "plpgsql"
 
   create_table "classroom", force: :cascade do |t|
-    t.integer "user_id"
+    t.string "room_num"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -48,7 +48,6 @@ ActiveRecord::Schema.define(version: 20180111004808) do
 
   create_table "users", force: :cascade do |t|
     t.string "name"
-    t.integer "class_id"
     t.boolean "teacher", default: false
     t.boolean "student", default: false
     t.string "email", default: "", null: false
