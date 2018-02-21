@@ -11,11 +11,4 @@ class User < ApplicationRecord
   has_many :fines
   has_many :rewards
 
-  def balance
-    total = self.rewards - self.fines
-    if total < 0
-      total = 0
-    end
-  end
-
 end

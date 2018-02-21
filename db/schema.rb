@@ -10,10 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180111004808) do
+ActiveRecord::Schema.define(version: 20180221230301) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "accounts", force: :cascade do |t|
+    t.integer "balance"
+    t.integer "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "classrooms", force: :cascade do |t|
     t.string "room_num"
@@ -21,27 +28,11 @@ ActiveRecord::Schema.define(version: 20180111004808) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "fines", force: :cascade do |t|
+  create_table "deposits", force: :cascade do |t|
     t.string "name"
     t.string "notes"
     t.integer "value"
     t.integer "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "rewards", force: :cascade do |t|
-    t.string "name"
-    t.string "notes"
-    t.integer "value"
-    t.integer "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "rooms", force: :cascade do |t|
-    t.integer "user_id"
-    t.integer "classroom_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -65,6 +56,15 @@ ActiveRecord::Schema.define(version: 20180111004808) do
     t.boolean "admin", default: false
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+  end
+
+  create_table "withdrawls", force: :cascade do |t|
+    t.string "name"
+    t.string "notes"
+    t.integer "value"
+    t.integer "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end
