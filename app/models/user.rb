@@ -9,8 +9,8 @@ class User < ApplicationRecord
 
   has_one :classroom
   has_one :account
-  has_many :fines
-  has_many :rewards
+  has_many :withdrawls
+  has_many :deposits
 
 
 end
